@@ -1,0 +1,144 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencys</title>
+<style>
+    table {
+  /* Table layout */
+  border-collapse: collapse;
+  /* Table width */
+  width: 100%;
+  /* Table border */
+  border: 1px solid #ccc;
+  /* Table margin */
+  margin-bottom: 1rem;
+  /* Table border radius */
+  border-radius: 0.5rem;
+  /* Table box shadow */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+th {
+  /* Table header background color */
+  background-color: #f2f2f2;
+  /* Table header text color */
+  color: #666;
+  /* Table header text align */
+  text-align: center;
+  /* Table header padding */
+  padding: 0.5rem 1rem;
+  /* Table header border */
+  border: 1px solid #ccc;
+  /* Table header border radius */
+  border-radius: 0.5rem;
+  /* Table header box shadow */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+td {
+  /* Table cell padding */
+  padding: 0.5rem 1rem;
+  /* Table cell border */
+  border: 1px solid #ccc;
+}
+
+/* Table hover effect */
+tr:hover {
+  background-color: #eee;
+}
+
+/* Table responsive design */
+@media (max-width: 768px) {
+  table {
+    /* Table width */
+    width: auto;
+  }
+}
+
+/* Add additional styling here */
+
+</style>
+</head>
+<body>
+    <h1>Agencys</h1>
+    <table class="tablee">
+        <thead class="theadd">
+            <tr class="row">
+               <th>Agency Type</th>  
+               <th>Agency Name</th>  
+               <th>State</th>  
+               <th>District</th> 
+               <th>Pincode</th>  
+               <th>Contact No.</th> 
+               <th>Alternative Contact No.</th> 
+            </tr>
+        </thead>
+        <tbody class="tbd">
+
+            <% for (let i = 0; i < data.length; i++) { %>
+                <tr>
+                
+                <td><%=  data[i].agency %></td>
+                <td><%=  data[i].name %></td>
+                <td><%=  data[i].state %></td>
+                <td><%=  data[i].district %></td>
+                <td><%=  data[i].pincode %></td>
+                <td><%=  data[i].contact %></td>
+                <td><%=  data[i].altcontact %></td>
+               </tr>
+            <% } %>
+            
+            
+           
+        </tbody> 
+     
+        
+    </table>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+   
+</head>
+<body class="bg-gray-100">
+    <h1 class="text-2xl font-bold text-center py-4 bg-blue-500 text-white">Agencies</h1>
+    <div class="max-w-4xl mx-auto p-6">
+        <div class="overflow-x-auto">
+            <table class="table-auto w-full bg-white shadow-lg rounded-lg">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 text-left text-blue-500 border">Agency Type</th>  
+                        <th class="px-4 py-2 text-left text-blue-500 border">Agency Name</th>  
+                        <th class="px-4 py-2 text-left text-blue-500 border">State</th>  
+                        <th class="px-4 py-2 text-left text-blue-500 border">District</th> 
+                        <th class="px-4 py-2 text-left text-blue-500 border">Pincode</th>  
+                        <th class="px-4 py-2 text-left text-blue-500 border">Contact No.</th> 
+                        <th class="px-4 py-2 text-left text-blue-500 border">Alternative Contact No.</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <td class="px-4 py-2 border"><%=  data[i].agency %></td>
+                            <td class="px-4 py-2 border"><%=  data[i].name %></td>
+                            <td class="px-4 py-2 border"><%=  data[i].state %></td>
+                            <td class="px-4 py-2 border"><%=  data[i].district %></td>
+                            <td class="px-4 py-2 border"><%=  data[i].pincode %></td>
+                            <td class="px-4 py-2 border"><%=  data[i].contact %></td>
+                            <td class="px-4 py-2 border"><%=  data[i].altcontact %></td>
+                        </tr>
+                    <% } %>
+                </tbody> 
+            </table>
+        </div>
+    </div>
+</body>
+</html>
