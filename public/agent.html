@@ -21,6 +21,7 @@
       height: 100%;
       background-color: rgba(0, 0, 0, 0.7);
       z-index: 1;
+      overflow-y: auto;
 
     }
     label{
@@ -76,7 +77,13 @@
     transform: scale(1.1);
   }
 
-
+ @media screen and (max-width: 768px) {
+    .popup {
+        width: 80%;
+        height: 65%;
+        max-width: none;
+        max-height:none;
+    }
   </style>
 </head>
 
